@@ -1,0 +1,25 @@
+:root {
+	--primary-color: #FF5F6D;
+	--red: var(--primary-color);
+	--orange: #FFC371;
+	--brown: #4D4444;
+	--pink: #FDADAB;
+	--black: #4A4A4A;
+	--white: #FFFFFF;
+	--light-gray: #E5E5E5;
+	--medium-gray: #B5B1B1;
+	--dark-gray: #4A4A4A;
+	--shadow: drop-shadow(0 0 10px rgba(0,0,0,0.35));
+	--gradient: linear-gradient(-90deg, #FF5F6D 0%, #FFC371 100%);
+
+	--font-text: 'Lato', sans-serif;
+	--font-special: 'Mayland Script';
+}
+
+@custom-media --screen-tiny (max-width: 320px);
+@custom-media --screen-mobile (max-width: 640px);
+@custom-media --screen-phablet (max-width: 820px);
+@custom-media --screen-tablet print, (max-width: 1000px);
+@custom-media --screen-desktop print, (max-width: 1240px);
+@custom-media --screen-big print, (min-width: 2000px);
+@custom-media --screen-4k (min-width: 3870px);

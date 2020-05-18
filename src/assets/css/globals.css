@@ -1,0 +1,8 @@
+html, body {
+	background-image: var(--gradient);
+	color: var(--medium-gray);
+	font-family: var(--font-text);
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

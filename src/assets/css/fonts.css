@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Mayland Script';
+	src: url('../fonts/Mayland Script.eot');
+	src: url('../fonts/Mayland Script.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Mayland Script.woff') format('woff'),
+	url('../fonts/Mayland Script.ttf')  format('truetype'),
+	url('../fonts/Mayland Script.svg#dd6a2980ea9d6112f2547f17c2e36760') format('svg');
+
+	font-style: normal;
+	font-weight: 400;
+}
