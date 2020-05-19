@@ -1,8 +1,141 @@
+/* General */
+
 html, body {
-	background-image: var(--gradient);
-	color: var(--medium-gray);
-	font-family: var(--font-text);
+	font-family:'AvenirNextLTW01-Regular';
 	font-size: 100%;
+	color: white;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	background-color: black;
+	font-size: 15pt;
+	line-height: 25pt;
 }
+
+a {
+	color: white;
+}
+
+section  {
+	margin: 0% 20%;
+}
+
+h1, h2 {
+	font-family:'Avenir Next LT W01 Bold';
+}
+
+h1 {
+	text-align: center;
+	font-size: 37pt;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+b{
+	font-family:'Avenir Next LT W01 Bold';
+}
+
+
+/* Navigation */
+
+nav {
+	margin: auto;
+	width: 80%;
+	margin-top: 50px;
+
+	& ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		& li {
+			display: inline;
+		}
+	}
+
+	& a  {
+		text-decoration: none;
+		padding: 0px 50px;
+		text-align: center;
+	}
+	
+}
+
+
+.logo {
+	display: table;
+	margin: auto;
+	margin-top: 40px;
+	width: 1000px;
+}
+
+body {
+	background: url('../img/head-bg.jpg');
+  	background-position: top center;
+  	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.available-on {
+	text-align: center;
+	font-size: 17pt;
+	margin-top: 28em;
+
+	& img {
+		width: 100px;
+		padding: 10px;
+	}
+}
+
+/* Sections */
+
+.movie-overview {
+	display: flex;
+}
+
+.movie-poster {
+	flex-basis: 50%;
+	& img {
+		width: 20em;
+	}
+}
+
+.movie-description {
+}
+
+.movie-info {
+}
+
+/*
+.movie-poster {
+	height: 30em;
+	border-radius: 20px;
+	float: left;
+	margin-right: 50px;
+}
+
+.movie-description {
+	padding-left: 20px;
+}
+
+.movie-info {
+	list-style-type: none;
+
+	& li {
+		padding-right: 10em;
+		padding-bottom: 30px;
+		float: left;
+	}
+}
+*/
+
+/* Footer */
+
+footer a {
+	text-decoration: none;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+
