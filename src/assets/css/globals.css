@@ -12,13 +12,9 @@ html, body {
 	line-height: 25pt;
 }
 
-img {
-	
-}
-
 a {
 	color: white;
-  }
+}
 
 section  {
 	margin: 0% 20%;
@@ -30,7 +26,7 @@ h1, h2 {
 
 h1 {
 	text-align: center;
-	font-size: 37pt;
+	font-size: 200%;
 	margin-top: 25%;
 	margin-bottom: 5%;
 }
@@ -105,7 +101,6 @@ body {
 
 .available-on {
 	text-align: center;
-	font-size: 17pt;
 	margin-top: 29%;
 
 	& img {
@@ -211,6 +206,7 @@ body {
 .actor {
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: 20px;
 }
 
 .actor-portrait { 
@@ -221,7 +217,6 @@ body {
 		border-radius: 20px;
 	}
 }
-
 
 .actor-text {
 	flex-basis: 70%;
@@ -280,6 +275,7 @@ footer {
 	margin-left: auto;
 	margin-right: 30px;
 	margin-top: -150px;
+	width: 30%;
 }
 
 .ig-logo {
@@ -336,5 +332,98 @@ footer a:hover:after {
 	90%, 100% {
 	  left: 100%;
 	  right: 0;
+	}
+}
+
+/* Media Query */
+
+
+@media only screen and (max-width: 1800px) {
+	body {
+		font-size: 12pt;
+		line-height: 17pt;
+	}
+
+}
+
+@media only screen and (max-width: 1400px) {
+	body {
+		font-size: 10pt;
+		line-height: 15pt;
+	}
+
+}
+
+@media only screen and (max-width: 1100px) {
+	body {
+	  font-size: 8pt;
+	  line-height: 13pt;
+	}
+
+	.ig-logo {
+		width: 50px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+
+	body {
+		background-size: 200%;
+	}
+
+	.logo {
+		width: 50%;
+	}
+
+	.available-on {
+		margin-top: 65%;
+	}
+	
+	.movie-overview {
+		justify-content: center;
+	}
+
+	.movie-poster {
+		flex-basis: 40%;
+		margin-top: 20px;
+	}
+	.movie-description {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.footer-content2 {
+		width: 35%;
+	}
+
+	.ig-logo {
+		width: 6%;
+	}
+
+	nav {
+		margin-top: 20px;
+	
+		& ul {
+	
+			& img {
+				width: 12%;
+			}
+
+			& a  {
+				padding: 0px 20px;
+			}
+		}
+	}
+
+	.yt-videos {
+		flex-direction: column;
+	
+		& .thumbnail {
+			opacity: 100%;
+		}
+
+		& img {
+			width: 80%;
+		}
 	}
 }
