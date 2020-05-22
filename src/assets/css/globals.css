@@ -35,6 +35,24 @@ b{
 	font-family:'Avenir Next LT W01 Bold';
 }
 
+.iframe-responsive {
+	overflow: hidden;
+	padding-top: 56.25%;
+	position: relative;
+
+	& iframe {
+		border: 0;
+   		height: 100%;
+		left: 0;
+   		position: absolute;
+   		top: 0;
+		width: 100%;
+	}
+}
+
+.rounded-corner {
+	border-radius: 20px;
+}
 
 /* Navigation */
 
@@ -52,6 +70,11 @@ nav {
 		& li {
 			display: inline;
 		}
+
+		& img {
+			width: 7%;
+		}
+
 	}
 
 	& a  {
@@ -62,12 +85,11 @@ nav {
 	
 }
 
-
 .logo {
 	display: table;
 	margin: auto;
 	margin-top: 40px;
-	width: 1000px;
+	width: 45%;
 }
 
 body {
@@ -80,7 +102,7 @@ body {
 .available-on {
 	text-align: center;
 	font-size: 17pt;
-	margin-top: 28em;
+	margin-top: 25%;
 
 	& img {
 		width: 100px;
@@ -88,47 +110,45 @@ body {
 	}
 }
 
-/* Sections */
+/* Overview */
 
 .movie-overview {
 	display: flex;
+	flex-wrap: wrap;
+
 }
 
-.movie-poster {
-	flex-basis: 50%;
+.movie-poster { 
+	flex-basis: 30%;
+
 	& img {
-		width: 20em;
+		width: 95%;
+		border-radius: 20px;
 	}
 }
 
 .movie-description {
+	flex-basis: 70%;
 }
 
 .movie-info {
+
 }
 
-/*
-.movie-poster {
-	height: 30em;
-	border-radius: 20px;
-	float: left;
-	margin-right: 50px;
-}
-
-.movie-description {
-	padding-left: 20px;
-}
-
-.movie-info {
+.movie-info-c { 
+	display: inline-flex;
+	flex-wrap: wrap;
+	padding: 0;
 	list-style-type: none;
 
 	& li {
-		padding-right: 10em;
-		padding-bottom: 30px;
-		float: left;
+		flex-basis: 30%;
 	}
 }
-*/
+
+/* Trailers */
+
+
 
 /* Footer */
 
