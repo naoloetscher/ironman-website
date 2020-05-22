@@ -106,7 +106,7 @@ body {
 .available-on {
 	text-align: center;
 	font-size: 17pt;
-	margin-top: 25%;
+	margin-top: 29%;
 
 	& img {
 		width: 100px;
@@ -126,17 +126,13 @@ body {
 	flex-basis: 30%;
 
 	& img {
-		width: 95%;
+		width: 92%;
 		border-radius: 20px;
 	}
 }
 
 .movie-description {
 	flex-basis: 70%;
-}
-
-.movie-info {
-
 }
 
 .movie-info-c { 
@@ -178,6 +174,30 @@ body {
 	& .thumbnail:first-child {
 		opacity: 100%;
 	}
+}
+
+/* Gallery */
+
+.wallpaper-row {
+	display: -ms-flexbox; 
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.wallpaper-column {
+	-ms-flex: 50%;
+	flex: 50%;
+	max-width: 50%;
+	padding: 0 20px;
+}
+  
+.wallpaper-column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	border-radius: 20px;
 }
 
 /* Footer */
