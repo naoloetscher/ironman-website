@@ -862,9 +862,13 @@ html, body {
 	line-height: 25pt;
 }
 
+img {
+	
+}
+
 a {
 	color: white;
-}
+  }
 
 section  {
 	margin: 0% 20%;
@@ -877,7 +881,7 @@ h1, h2 {
 h1 {
 	text-align: center;
 	font-size: 37pt;
-	margin-top: 10%;
+	margin-top: 25%;
 	margin-bottom: 5%;
 }
 
@@ -887,7 +891,7 @@ b{
 
 .iframe-responsive {
 	overflow: hidden;
-	padding-top: 56.25%;
+	padding-top: 42%;
 	position: relative
 }
 
@@ -945,7 +949,7 @@ nav a  {
 body {
 	background: url('../img/head-bg.jpg');
   	background-position: top center;
-  	background-size: 80%;
+  	background-size: 100%;
 	background-repeat: no-repeat;
 }
 
@@ -989,23 +993,145 @@ body {
 	display: inline-flex;
 	flex-wrap: wrap;
 	padding: 0;
-	list-style-type: none
+	list-style-type: none;
+	width: 100%
 }
 
 .movie-info-c li {
 		flex-basis: 30%;
+		padding-top: 5%;
 	}
 
 /* Trailers */
 
+.yt-videos {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	flex-direction: row
+}
+
+.yt-videos .thumbnail {
+		flex: 1 1 30%;
+		color: black;
+		opacity: 30%
+	}
+
+.yt-videos .thumbnail img {
+			width: 100%;
+		}
+
+.yt-videos .thumbnail:hover {
+		opacity: 80%;
+		transition: 0.3s;
+	}
+
+.yt-videos .thumbnail:first-child {
+		opacity: 100%;
+	}
+
 /* Footer */
 
+footer {
+	margin-top: 15%;
+	background-image: url(../img/footer-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center bottom;
+}
+
+.instagram-link {
+	text-align: center;
+}
+
+.footerline {
+	display: flex;
+}
+
+.footer-content1 {
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 30px;
+	margin-left: 30px;
+}
+
+.footer-content2 {
+	margin-left: auto;
+	margin-right: 30px;
+	margin-top: -150px;
+}
+
+.ig-logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80px;
+}
+
 footer a {
+	color: white;
+	position: relative;
 	text-decoration: none;
+	transition: color .4s ease-out;
 }
 
 footer a:hover {
-	text-decoration: underline;
+	color: rgb(224, 224, 224); 
+	right: 0;
+	text-decoration: none;
+}
+
+footer a:hover:after {
+	border-color: rgb(224, 224, 224);
+	right: 0;
+}
+
+footer a:after {
+	border-radius: 1em;
+	border-top: .1em solid white;
+	content: "";
+	position: absolute;
+	right: 100%;
+	bottom: .14em;
+	left: 0;
+	transition: right .4s cubic-bezier(0,.5,0,1),
+	border-color .4s ease-out;
+}
+
+footer a:hover:after {
+	-webkit-animation: anchor-underline 2s cubic-bezier(0,.5,0,1) infinite;
+	        animation: anchor-underline 2s cubic-bezier(0,.5,0,1) infinite;
+	border-color: white;
+}
+
+@-webkit-keyframes anchor-underline {
+	0%, 10% {
+	  left: 0;
+	  right: 100%;
+	}
+	40%, 60% {
+	  left: 0;
+	  right: 0;
+	}
+	90%, 100% {
+	  left: 100%;
+	  right: 0;
+	}
+}
+
+@keyframes anchor-underline {
+	0%, 10% {
+	  left: 0;
+	  right: 100%;
+	}
+	40%, 60% {
+	  left: 0;
+	  right: 0;
+	}
+	90%, 100% {
+	  left: 100%;
+	  right: 0;
+	}
 }
 
 /*# sourceMappingURL=styles.css.map */
