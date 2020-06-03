@@ -1093,6 +1093,17 @@ body {
 		transition: 0.3s;
 	}
 
+/* Button */
+
+button {
+		padding: 20px;
+		border-radius: 20px
+	}
+
+button a {
+			color: black;
+		}
+
 /* Footer */
 
 footer {

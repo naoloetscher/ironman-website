@@ -246,6 +246,17 @@ body {
 	}
 }
 
+/* Button */
+
+	button {
+		padding: 20px;
+		border-radius: 20px;
+		
+		& a {
+			color: black;
+		}
+	}
+
 /* Footer */
 
 footer {
