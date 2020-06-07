@@ -92,7 +92,7 @@ nav {
 	width: 45%;
 }
 
-body {
+.overview {
 	background: url('../img/head-bg.jpg');
   	background-position: top center;
   	background-size: 100%;
@@ -179,18 +179,18 @@ body {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	padding: 0 4px;
+	padding: 0 1px;
 }
 
 .wallpaper-column {
 	-ms-flex: 50%;
 	flex: 50%;
-	max-width: 50%;
+	max-width: 47%;
 	padding: 0 20px;
 }
   
 .wallpaper-column img {
-	margin-top: 8px;
+	margin-top: 40px;
 	vertical-align: middle;
 	width: 100%;
 	border-radius: 20px;
@@ -206,20 +206,20 @@ body {
 .actor {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 20px;
+	margin-top: 10em;
 }
 
 .actor-portrait { 
-	flex-basis: 30%;
+	flex-basis: 20%;
 
 	& img {
-		width: 92%;
+		width: 90%;
 		border-radius: 20px;
 	}
 }
 
 .actor-text {
-	flex-basis: 70%;
+	flex-basis: 80%;
 }
 
 .actor-images {
@@ -233,10 +233,10 @@ body {
 		flex: 1 1 30%;
 		color: black;
 		margin-top: 10px;
-		border-radius: 20px;
 
 		& img {
 			width: 100%;
+			border-radius: 20px;
 		}
 	}
 
@@ -246,11 +246,64 @@ body {
 	}
 }
 
+/* Shop */
+
+.basket {
+	margin-left: auto;
+	width: 4%;
+}
+
+.basket-c {
+	width: 100%;
+	display: flex;
+}
+
+.shop-slider {
+	margin-top: 80px;
+	display: flex;
+	justify-content: space-between;
+	& img {
+		flex-basis: 1;
+		width: 80%;
+	}
+}
+
+.pricetag {
+	text-align: center;
+	margin-top: 20px;
+	
+	& button {
+		margin-top: 20px;
+	}
+}
+
+.shop-gallery {
+	margin-top: 15em;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.shop-gallery-item {
+	margin-top: 2em;
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	& img {
+		border-radius: 20px;
+		width: 90%;
+		
+	}
+}
+
+
 /* Button */
 
 	button {
-		padding: 20px;
-		border-radius: 20px;
+		padding: 15px 60px;
+		border-radius: 40px;
+		border-width: 0px;
 		
 		& a {
 			color: black;
