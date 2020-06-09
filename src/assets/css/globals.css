@@ -69,6 +69,7 @@ nav {
 
 		& li {
 			display: inline;
+			text-align: center;
 		}
 
 		& img {
@@ -79,8 +80,33 @@ nav {
 
 	& a  {
 		text-decoration: none;
-		padding: 0px 50px;
+		margin: 0px 50px;
 		text-align: center;
+		position: relative;
+		color: white;
+	}
+
+	& a:hover {
+		color: white;
+
+	}
+
+	& a::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background-color: white;
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all 0.3s ease-in-out 0s;
+	}
+
+	& a:hover::before {
+		visibility: visible;
+		transform: scaleX(1);
 	}
 	
 }
@@ -102,11 +128,24 @@ nav {
 .available-on {
 	text-align: center;
 	margin-top: 29%;
+	
 
 	& img {
 		width: 100px;
 		padding: 10px;
+		transition: 0.3s;
 	}
+
+	& img:hover {
+		width: 110px;
+		padding: 10px;
+	}
+}
+
+.available-on-logos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Overview */
@@ -174,23 +213,20 @@ nav {
 
 /* Gallery */
 
-.wallpaper-row {
-	display: -ms-flexbox; 
+.wallpaper-row { 
 	display: flex;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	padding: 0 1px;
 }
 
 .wallpaper-column {
-	-ms-flex: 50%;
 	flex: 50%;
 	max-width: 47%;
-	padding: 0 20px;
+	padding: 0 1.5%;
 }
   
 .wallpaper-column img {
-	margin-top: 40px;
+	margin-top: 6%;
 	vertical-align: middle;
 	width: 100%;
 	border-radius: 20px;
@@ -200,6 +236,7 @@ nav {
 	width: 100%;
 	border-radius: 20px;
 }
+
 
 /* Cast */
 
@@ -300,15 +337,25 @@ nav {
 
 /* Button */
 
-	button {
-		padding: 15px 60px;
-		border-radius: 40px;
-		border-width: 0px;
+button {
+	padding: 15px 60px;
+	border-radius: 40px;
+	border-width: 0px;
+	transition: 0.3s;
+	background-color: white;
 		
-		& a {
-			color: black;
-		}
+	& a {
+		color: black;
+		text-decoration: none;
 	}
+}
+
+button:hover {
+	padding: 15px 80px;
+	background-color: rgb(255, 77, 77);
+	color: white;
+}
+
 
 /* Footer */
 
@@ -318,35 +365,47 @@ footer {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center bottom;
+	position: relative;
+	height: 20vw;
 }
 
 .instagram-link {
 	text-align: center;
-}
-
-.footerline {
-	display: flex;
+	position: absolute;
+	width: 100%;
 }
 
 .footer-content1 {
 	margin-right: auto;
 	margin-top: auto;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	margin-left: 30px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
 .footer-content2 {
-	margin-left: auto;
-	margin-right: 30px;
-	margin-top: -150px;
+	position: absolute;
 	width: 30%;
+	height: auto;
+	bottom: 0px;
+	left: auto;
+	right: 30px;
 }
+
 
 .ig-logo {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80px;
+	width: calc(20px + 2%) !important;
+	z-index: 1;
+	transition: 0.9s;
+}
+
+.ig-logo:hover {
+	transform: rotate(360deg);
 }
 
 footer a {
@@ -359,44 +418,14 @@ footer a {
 footer a:hover {
 	color: rgb(224, 224, 224); 
 	right: 0;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
-footer a:hover:after {
-	border-color: rgb(224, 224, 224);
-	right: 0;
-}
-  
-footer a:after {
-	border-radius: 1em;
-	border-top: .1em solid white;
-	content: "";
-	position: absolute;
-	right: 100%;
-	bottom: .14em;
-	left: 0;
-	transition: right .4s cubic-bezier(0,.5,0,1),
-	border-color .4s ease-out;
-}
-  
-footer a:hover:after {
-	animation: anchor-underline 2s cubic-bezier(0,.5,0,1) infinite;
-	border-color: white;
-}
-  
-  @keyframes anchor-underline {
-	0%, 10% {
-	  left: 0;
-	  right: 100%;
-	}
-	40%, 60% {
-	  left: 0;
-	  right: 0;
-	}
-	90%, 100% {
-	  left: 100%;
-	  right: 0;
-	}
+
+.preloader-button {
+	display:flex;
+	justify-content: center;
+	padding: 20px;
 }
 
 /* Media Query */
@@ -411,7 +440,6 @@ footer a:hover:after {
 	.ig-logo {
 		width: 50px;
 	}
-	
 }
 
 
@@ -500,5 +528,48 @@ footer a:hover:after {
 		& img {
 			width: 80%;
 		}
+	}
+
+	.wallpaper-column {
+		max-width: 100%;
+	}
+
+	section  {
+		margin: 0% 10%;
+	}
+
+	nav {
+		width: 80%;
+		margin-top: 0;
+	
+		& ul {
+			margin-top: 5px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		
+		& a::before {
+			height: 0px;
+		}
+
+		& li:nth-child(3) {
+			order: 5;
+			margin-top: 20px;
+		}
+
+	}
+	
+	.logo {
+		margin-top: 0;
+	}
+
+	header {
+		display: flex;
+		flex-direction: column;
+	}
+
+	header:first-child {
+		order: 2;
 	}
 }
