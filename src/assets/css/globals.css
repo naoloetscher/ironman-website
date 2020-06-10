@@ -278,10 +278,16 @@ nav {
 	}
 
 	& .actor-img:hover {
-		margin-top: 0px;
-		transition: 0.3s;
+		animation: bounce 1.5s ease-in-out;
 	}
 }
+
+
+@keyframes bounce {
+	0%{top: 0px;} 
+	50%{top: 20px;}
+	100%{top: 0px;}
+ }
 
 /* Shop */
 
@@ -571,5 +577,6 @@ footer a:hover {
 
 	header:first-child {
 		order: 2;
+		opacity: 0%;
 	}
 }
