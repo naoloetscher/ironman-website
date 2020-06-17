@@ -888,8 +888,13 @@ b{
 .iframe-responsive {
 	overflow: hidden;
 	padding-top: 42%;
-	position: relative
+	position: relative;
+	display: none
 }
+
+.iframe-responsive.block {
+		display: block;
+	}
 
 .iframe-responsive iframe {
 		border: 0;

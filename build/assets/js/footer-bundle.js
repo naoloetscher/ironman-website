@@ -10329,6 +10329,19 @@ $(window).on('load', function () {
     });
   }, 2000);
   AOS.init();
+  alert(123);
+});
+$('#trailer1Thumb').click(function () {
+  $('.iframe-responsive').removeClass('block');
+  $('#trailer1').addClass('block');
+});
+$('#trailer2Thumb').click(function () {
+  $('.iframe-responsive').removeClass('block');
+  $('#trailer2').addClass('block');
+});
+$('#trailer3Thumb').click(function () {
+  $('.iframe-responsive').removeClass('block');
+  $('#trailer3').addClass('block');
 });
 "use strict";
 

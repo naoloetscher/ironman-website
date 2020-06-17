@@ -39,6 +39,11 @@ b{
 	overflow: hidden;
 	padding-top: 42%;
 	position: relative;
+	display: none;
+
+	&.block {
+		display: block;
+	}
 
 	& iframe {
 		border: 0;
